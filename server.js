@@ -12,19 +12,19 @@ app.use(express.json())
 app.use(express.static("resources/"))
 
 app.get("/",async (req, res)=>{
-    const posts = await data.getPosts()
-    res.render("main", {posts:posts})
+    // const posts = await data.getPosts()
+    res.render("main")
 })
 
-app.get("/signup",async (req, res)=>{
-    const posts = await data.getPosts()
-    res.render("main", {posts:posts})
-})
+// app.get("/signup",async (req, res)=>{
+//     const posts = await data.getPosts()
+//     res.render("main", {posts:posts})
+// })
 
-app.get("/login",async (req, res)=>{
-    const posts = await data.getPosts()
-    res.render("main", {posts:posts})
-})
+// app.get("/login",async (req, res)=>{
+//     const posts = await data.getPosts()
+//     res.render("main", {posts:posts})
+// })
 
 
 app.listen(port , () => {
